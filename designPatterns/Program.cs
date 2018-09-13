@@ -1,4 +1,5 @@
 ﻿using System;
+using designPatterns.Creational.Prototype;
 
 namespace designPatterns
 {
@@ -6,6 +7,8 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
+            FootballClient prototypeClient = new FootballClient();
+            prototypeClient.RunClientCode();
         }
     }
 }
