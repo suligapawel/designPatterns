@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using designPatterns.Creational.Prototype;
 using Creational.Singleton;
 
 namespace designPatterns
@@ -7,8 +8,11 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            var SingletonClient = new MatchClient();
+            var singletonClient = new MatchClient();
             SingletonClient.RunClientCode();
+          
+            var prototypeClient = new FootballClient();
+            prototypeClient.RunClientCode();
         }
     }
 }
