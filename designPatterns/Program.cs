@@ -1,4 +1,5 @@
 ﻿using System;
+using Creational.Singleton;
 
 namespace designPatterns
 {
@@ -6,6 +7,8 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
+            var SingletonClient = new MatchClient();
+            SingletonClient.RunClientCode();
         }
     }
 }
