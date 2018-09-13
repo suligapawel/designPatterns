@@ -8,10 +8,10 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            var singletonClient = new MatchClient();
-            SingletonClient.RunClientCode();
+            var singletonClient = new SingletonClient();
+            singletonClient.RunClientCode();
           
-            var prototypeClient = new FootballClient();
+            var prototypeClient = new PrototypeClient();
             prototypeClient.RunClientCode();
         }
     }

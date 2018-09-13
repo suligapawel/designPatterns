@@ -2,22 +2,24 @@ using System;
 
 namespace Creational.Singleton
 {
-    public class MatchClient
+    public class SingletonClient
     {
         public void RunClientCode()
         {
-            Console.WriteLine("--- START MATCH ---");
+            Console.WriteLine("***** START SINGLETON *****");
             MatchStatsSingleton firstHalf = MatchStatsSingleton.GetInstance();
 
-            firstHalf.ShowYellowCard(HalfEnum.First);
-            firstHalf.ShowYellowCard(HalfEnum.First);
-            firstHalf.ShowYellowCard(HalfEnum.First);
+            for (int i = 0; i < 4; i++)
+            {
+                firstHalf.ShowYellowCard(HalfEnum.First);
+            }
+
             firstHalf.ShowRedCard(HalfEnum.First);
 
             firstHalf.GetFirstHalfStats();
             firstHalf.GetSecondHalfStats();
 
-            Console.WriteLine("--- END FIRST HALF---");
+            Console.WriteLine("--- END FIRST HALF ---");
 
             MatchStatsSingleton secondHalf = MatchStatsSingleton.GetInstance();
 
@@ -31,7 +33,8 @@ namespace Creational.Singleton
             secondHalf.GetSecondHalfStats();
             secondHalf.GetMatchStats();
 
-            Console.WriteLine("--- END MATCH ---");
+            Console.WriteLine("***** END SINGLETON *****");
+            Console.WriteLine();
         }
     }
 }
