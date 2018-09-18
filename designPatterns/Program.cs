@@ -9,11 +9,11 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            // var singletonClient = new SingletonClient();
-            // singletonClient.RunClientCode();
+            var singletonClient = new SingletonClient();
+            singletonClient.RunClientCode();
 
-            // var prototypeClient = new PrototypeClient();
-            // prototypeClient.RunClientCode();
+            var prototypeClient = new PrototypeClient();
+            prototypeClient.RunClientCode();
 
             var builderClient = new BuilderClient();
             builderClient.RunClientCode();
