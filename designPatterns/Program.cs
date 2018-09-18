@@ -1,6 +1,7 @@
 using System;
 using designPatterns.Creational.Prototype;
 using Creational.Singleton;
+using designPatterns.Creational.Builder;
 
 namespace designPatterns
 {
@@ -8,11 +9,14 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            var singletonClient = new SingletonClient();
-            singletonClient.RunClientCode();
-          
-            var prototypeClient = new PrototypeClient();
-            prototypeClient.RunClientCode();
+            // var singletonClient = new SingletonClient();
+            // singletonClient.RunClientCode();
+
+            // var prototypeClient = new PrototypeClient();
+            // prototypeClient.RunClientCode();
+
+            var builderClient = new BuilderClient();
+            builderClient.RunClientCode();
         }
     }
 }
