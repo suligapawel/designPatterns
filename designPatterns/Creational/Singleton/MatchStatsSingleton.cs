@@ -1,6 +1,6 @@
 using System;
 
-namespace Creational.Singleton
+namespace designPatterns.Creational.Singleton
 {
     public class MatchStatsSingleton
     {

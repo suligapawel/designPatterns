@@ -1,5 +1,5 @@
 
-namespace Creational.Singleton
+namespace designPatterns.Creational.Singleton
 {
     public enum HalfEnum
     {
