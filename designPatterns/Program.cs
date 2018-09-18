@@ -1,6 +1,6 @@
 using System;
 using designPatterns.Creational.Prototype;
-using Creational.Singleton;
+using designPatterns.Creational.Singleton;
 using designPatterns.Creational.Builder;
 
 namespace designPatterns
