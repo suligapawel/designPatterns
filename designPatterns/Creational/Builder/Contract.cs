@@ -43,7 +43,7 @@ namespace designPatterns.Creational.Builder
             StringBuilder stringBuilder = new StringBuilder();
 
             stringBuilder.AppendLine($"Footballer has house? {HasHouse} - {House}");
-            stringBuilder.AppendLine($"Footballer has house? {HasCar} - {CarModel}");
+            stringBuilder.AppendLine($"Footballer has car? {HasCar} - {CarModel}");
             stringBuilder.AppendLine($"Footballer salary: {_salary}");
 
             return stringBuilder.ToString();
