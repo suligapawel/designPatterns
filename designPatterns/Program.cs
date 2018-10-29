@@ -1,9 +1,10 @@
-using System;
+﻿using System;
 using designPatterns.Creational.Prototype;
 using designPatterns.Creational.Singleton;
 using designPatterns.Creational.Builder;
 using designPatterns.Structural.Adapter;
 using designPatterns.Behavioral.Command;
+using designPatterns.Structural.Facade;
 
 namespace designPatterns
 {
@@ -23,12 +24,15 @@ namespace designPatterns
             // builderClient.RunClientCode();
             // Console.WriteLine("~~~~~ END CREATIONAL DESIGN PATTERNS ~~~~~");
 
-            Console.WriteLine("~~~~~ START STRUCTURAL DESIGN PATTERNS ~~~~~");
+            // Console.WriteLine("~~~~~ START STRUCTURAL DESIGN PATTERNS ~~~~~");
 
-            var adapterClient = new AdapterClient();
-            adapterClient.RunClientCode();
+            // var adapterClient = new AdapterClient();
+            // adapterClient.RunClientCode();
 
-            Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
+            var facadeClient = new FacadeClient();
+            facadeClient.RunClientCode();
+
+            // Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
 
             // Console.WriteLine("~~~~~ START BEHAVIORAL DESIGN PATTERNS ~~~~~");
 
