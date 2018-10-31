@@ -5,6 +5,7 @@ using designPatterns.Creational.Builder;
 using designPatterns.Structural.Adapter;
 using designPatterns.Behavioral.Command;
 using designPatterns.Structural.Facade;
+using designPatterns.Behavioral.Observer;
 
 namespace designPatterns
 {
@@ -29,8 +30,8 @@ namespace designPatterns
             // var adapterClient = new AdapterClient();
             // adapterClient.RunClientCode();
 
-            var facadeClient = new FacadeClient();
-            facadeClient.RunClientCode();
+            // var facadeClient = new FacadeClient();
+            // facadeClient.RunClientCode();
 
             // Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
 
@@ -38,6 +39,9 @@ namespace designPatterns
 
             // var commandClient = new CommandClient();
             // commandClient.RunClientCode();
+
+            // var observerClient = new ObserverClient();
+            // observerClient.RunClientCode();
 
             // Console.WriteLine("~~~~~ END BEHAVIORAL DESIGN PATTERNS ~~~~~");
         }
