@@ -4,7 +4,7 @@ using designPatterns.Behavioral.Observer.Subscribers;
 
 namespace designPatterns.Behavioral.Observer
 {
-    public class ObserverClient
+    public class ObserverClient : IClient
     {
         private delegate IYoungFootballerSubject _playMatchDelegate();
 

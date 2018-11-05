@@ -2,7 +2,7 @@ using System;
 
 namespace designPatterns.Creational.Singleton
 {
-    public class SingletonClient
+    public class SingletonClient : IClient
     {
         public void RunClientCode()
         {

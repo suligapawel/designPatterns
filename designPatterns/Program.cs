@@ -6,6 +6,7 @@ using designPatterns.Structural.Adapter;
 using designPatterns.Behavioral.Command;
 using designPatterns.Structural.Facade;
 using designPatterns.Behavioral.Observer;
+using designPatterns.Behavioral.Memento;
 
 namespace designPatterns
 {
@@ -15,33 +16,36 @@ namespace designPatterns
         {
             // Console.WriteLine("~~~~~ START CREATIONAL DESIGN PATTERNS ~~~~~");
 
-            // var singletonClient = new SingletonClient();
+            // IClient singletonClient = new SingletonClient();
             // singletonClient.RunClientCode();
 
-            // var prototypeClient = new PrototypeClient();
+            // IClient prototypeClient = new PrototypeClient();
             // prototypeClient.RunClientCode();
 
-            // var builderClient = new BuilderClient();
+            // IClient builderClient = new BuilderClient();
             // builderClient.RunClientCode();
             // Console.WriteLine("~~~~~ END CREATIONAL DESIGN PATTERNS ~~~~~");
 
             // Console.WriteLine("~~~~~ START STRUCTURAL DESIGN PATTERNS ~~~~~");
 
-            // var adapterClient = new AdapterClient();
+            // IClient adapterClient = new AdapterClient();
             // adapterClient.RunClientCode();
 
-            // var facadeClient = new FacadeClient();
+            // IClient facadeClient = new FacadeClient();
             // facadeClient.RunClientCode();
 
             // Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
 
             // Console.WriteLine("~~~~~ START BEHAVIORAL DESIGN PATTERNS ~~~~~");
 
-            // var commandClient = new CommandClient();
+            // IClient commandClient = new CommandClient();
             // commandClient.RunClientCode();
 
-            // var observerClient = new ObserverClient();
+            // IClient observerClient = new ObserverClient();
             // observerClient.RunClientCode();
+
+            IClient mementoClient = new MementoClient();
+            mementoClient.RunClientCode();
 
             // Console.WriteLine("~~~~~ END BEHAVIORAL DESIGN PATTERNS ~~~~~");
         }
