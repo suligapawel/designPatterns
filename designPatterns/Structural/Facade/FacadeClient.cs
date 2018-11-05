@@ -2,7 +2,7 @@ using System;
 
 namespace designPatterns.Structural.Facade
 {
-    public class FacadeClient
+    public class FacadeClient : IClient
     {
         public void RunClientCode()
         {

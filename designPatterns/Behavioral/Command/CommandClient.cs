@@ -4,7 +4,7 @@ using designPatterns.Behavioral.Command.Handlers;
 
 namespace designPatterns.Behavioral.Command
 {
-    public class CommandClient
+    public class CommandClient : IClient
     {
         readonly Referee _referee;
 
@@ -25,7 +25,7 @@ namespace designPatterns.Behavioral.Command
             _referee.SetPenalty(new SecondPenaltyShooterCommand());
             _referee.Execute();
 
-            Console.WriteLine("***** START COMMAND *****");
+            Console.WriteLine("***** END COMMAND *****");
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace designPatterns.Creational.Prototype
 {
-    public class PrototypeClient
+    public class PrototypeClient : IClient
     {
         public void RunClientCode()
         {
