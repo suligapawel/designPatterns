@@ -7,6 +7,7 @@ using designPatterns.Behavioral.Command;
 using designPatterns.Structural.Facade;
 using designPatterns.Behavioral.Observer;
 using designPatterns.Behavioral.Memento;
+using designPatterns.Structural.Composite;
 
 namespace designPatterns
 {
@@ -31,8 +32,11 @@ namespace designPatterns
             // IClient adapterClient = new AdapterClient();
             // adapterClient.RunClientCode();
 
-            // IClient facadeClient = new FacadeClient();
-            // facadeClient.RunClientCode();
+            //IClient facadeClient = new FacadeClient();
+            //facadeClient.RunClientCode();
+
+            IClient compositeClient = new CompositeClient();
+            compositeClient.RunClientCode();
 
             // Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
 
@@ -41,13 +45,14 @@ namespace designPatterns
             // IClient commandClient = new CommandClient();
             // commandClient.RunClientCode();
 
-            // IClient observerClient = new ObserverClient();
-            // observerClient.RunClientCode();
+            //IClient observerClient = new ObserverClient();
+            //observerClient.RunClientCode();
 
-            IClient mementoClient = new MementoClient();
-            mementoClient.RunClientCode();
+            //IClient mementoClient = new MementoClient();
+            //mementoClient.RunClientCode();
 
             // Console.WriteLine("~~~~~ END BEHAVIORAL DESIGN PATTERNS ~~~~~");
+            Console.ReadKey();
         }
     }
 }
