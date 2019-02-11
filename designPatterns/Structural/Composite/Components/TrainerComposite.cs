@@ -9,9 +9,10 @@ namespace designPatterns.Structural.Composite.Components
 
         public override void Operation()
         {
+            Console.WriteLine($"{Name} start training.");
+
             foreach (var footballer in _children)
             {
-                Console.WriteLine($"Trainer {Name} trains the {footballer.Name}");
                 footballer.Operation();
             }
         }
