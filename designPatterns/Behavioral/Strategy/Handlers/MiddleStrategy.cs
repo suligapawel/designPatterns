@@ -6,28 +6,18 @@ namespace designPatterns.Behavioral.Strategy.Handlers
 {
     class MiddleStrategy : ITeamStrategy
     {
-        public void Play(IEnumerable<Player> players)
+        public void Play(Dictionary<string, Player> players)
         {
             SetPlayers(players);
             Console.WriteLine("Manager set tactic on 4-4-2. Team now play middle tactic.");
         }
 
-        private void SetPlayers(IEnumerable<Player> players)
+        private void SetPlayers(Dictionary<string, Player> players)
         {
-            foreach (var player in players)
-            {
-                if (player.Name == "Bereszyński")
-                    player.Position = Position.DF;
-
-                if (player.Name == "Krychowiak")
-                    player.Position = Position.MD;
-
-                if (player.Name == "Grosicki")
-                    player.Position = Position.MD;
-
-                if (player.Name == "Milik")
-                    player.Position = Position.AT;
-            }
+            players[StartingEleven.BERESZYNSKI].Position = Position.DF;
+            players[StartingEleven.KRYCHOWIAK].Position = Position.MD;
+            players[StartingEleven.GROSICKI].Position = Position.MD;
+            players[StartingEleven.MILIK].Position = Position.AT;           
         }
     }
 }

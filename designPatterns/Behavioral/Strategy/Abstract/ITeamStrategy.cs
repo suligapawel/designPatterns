@@ -4,6 +4,6 @@ namespace designPatterns.Behavioral.Strategy.Abstract
 {
     public interface ITeamStrategy
     {
-        void Play(IEnumerable<Player> players);
+        void Play(Dictionary<string, Player> players);
     }
 }

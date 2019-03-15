@@ -6,14 +6,13 @@ namespace designPatterns.Behavioral.Strategy
 {
     public class ContextStrategy
     {
+        private readonly Dictionary<string, Player> _players;
         private ITeamStrategy _strategy;
-        private List<Player> _players = new List<Player>
+
+        public ContextStrategy()
         {
-            new Player("Sczęsny", Position.GK),
-            new Player("Jędrzejczyk", Position.DF), new Player("Glik", Position.DF), new Player("Bednarek", Position.DF), new Player("Bereszyński", Position.DF),
-            new Player("Krychowiak", Position.MD), new Player("Grosicki", Position.MD), new Player("Linetty", Position.MD), new Player("Zieliński", Position.MD),
-            new Player("Lewandowski", Position.AT), new Player("Milik", Position.AT)
-         };
+            _players = StartingEleven.Players;
+        }
 
         public void SetStrategy(ITeamStrategy strategy)
         {
@@ -24,7 +23,6 @@ namespace designPatterns.Behavioral.Strategy
         {
             _strategy.Play(_players);
             WriteTactic();
-            Console.WriteLine(string.Empty);
         }
 
         private void WriteTactic()
@@ -33,25 +31,26 @@ namespace designPatterns.Behavioral.Strategy
             List<string> midfielders = new List<string>();
             List<string> attackers = new List<string>();
 
-            _players.ForEach(x =>
+            foreach (var player in _players)
             {
-                switch (x.Position)
+                switch (player.Value.Position)
                 {
                     case Position.DF:
-                        defenders.Add(x.Name);
+                        defenders.Add(player.Key);
                         break;
                     case Position.MD:
-                        midfielders.Add(x.Name);
+                        midfielders.Add(player.Key);
                         break;
                     case Position.AT:
-                        attackers.Add(x.Name);
+                        attackers.Add(player.Key);
                         break;
                 }
-            });
+            }
 
-            Console.WriteLine($"OBROŃCY: {string.Join(',', defenders)}");
-            Console.WriteLine($"POMOCNICY: {string.Join(',', midfielders)}");
-            Console.WriteLine($"ATAKUJĄCY: {string.Join(',', attackers)}");
+            Console.WriteLine($"OBROŃCY: {string.Join(", ", defenders)}");
+            Console.WriteLine($"POMOCNICY: {string.Join(", ", midfielders)}");
+            Console.WriteLine($"ATAKUJĄCY: {string.Join(", ", attackers)}");
+            Console.WriteLine(string.Empty);
         }
     }
 }

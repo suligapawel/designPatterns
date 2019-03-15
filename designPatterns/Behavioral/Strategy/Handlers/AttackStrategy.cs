@@ -6,28 +6,18 @@ namespace designPatterns.Behavioral.Strategy.Handlers
 {
     public class AttackStrategy : ITeamStrategy
     {
-        public void Play(IEnumerable<Player> players)
+        public void Play(Dictionary<string, Player> players)
         {
             SetPlayers(players);
             Console.WriteLine("Manager set tactic on 3-4-3. Team now play attack tactic.");
         }
 
-        private void SetPlayers(IEnumerable<Player> players)
+        private void SetPlayers(Dictionary<string, Player> players)
         {
-            foreach (var player in players)
-            {
-                if (player.Name == "Bereszyński")
-                    player.Position = Position.DF;
-
-                if (player.Name == "Grosicki")
-                    player.Position = Position.AT;
-
-                if (player.Name == "Krychowiak")
-                    player.Position = Position.MD;
-
-                if (player.Name == "Milik")
-                    player.Position = Position.AT;
-            }
+            players[StartingEleven.BERESZYNSKI].Position = Position.MD;
+            players[StartingEleven.KRYCHOWIAK].Position = Position.MD;
+            players[StartingEleven.GROSICKI].Position = Position.AT;
+            players[StartingEleven.MILIK].Position = Position.AT;           
         }
     }
 }
