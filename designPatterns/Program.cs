@@ -58,11 +58,11 @@ namespace designPatterns
             //client = new StateClient();
             //client.RunClientCode();
 
-            //client = new StrategyClient();
-            //client.RunClientCode();
-
-            client = new TemplateMethodClient();
+            client = new StrategyClient();
             client.RunClientCode();
+
+            //client = new TemplateMethodClient();
+            //client.RunClientCode();
 
             //Console.WriteLine("~~~~~ END BEHAVIORAL DESIGN PATTERNS ~~~~~");
             Console.ReadKey();
