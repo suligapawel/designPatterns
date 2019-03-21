@@ -11,6 +11,7 @@ using designPatterns.Structural.Composite;
 using designPatterns.Structural.Facade;
 using designPatterns.Behavioral.Strategy;
 using designPatterns.Behavioral.TemplateMethod;
+using designPatterns.Creational.AbstractFactory;
 
 namespace designPatterns
 {
@@ -29,6 +30,10 @@ namespace designPatterns
 
             //client = new BuilderClient();
             //client.RunClientCode();
+
+            client = new AbstractFactoryClient();
+            client.RunClientCode();
+
             //Console.WriteLine("~~~~~ END CREATIONAL DESIGN PATTERNS ~~~~~");
 
             //Console.WriteLine("~~~~~ START STRUCTURAL DESIGN PATTERNS ~~~~~");
@@ -58,8 +63,8 @@ namespace designPatterns
             //client = new StateClient();
             //client.RunClientCode();
 
-            client = new StrategyClient();
-            client.RunClientCode();
+            //client = new StrategyClient();
+            //client.RunClientCode();
 
             //client = new TemplateMethodClient();
             //client.RunClientCode();
