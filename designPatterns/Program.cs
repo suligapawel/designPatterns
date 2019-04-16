@@ -12,6 +12,7 @@ using designPatterns.Structural.Facade;
 using designPatterns.Behavioral.Strategy;
 using designPatterns.Behavioral.TemplateMethod;
 using designPatterns.Creational.AbstractFactory;
+using designPatterns.Structural.Decorator;
 
 namespace designPatterns
 {
@@ -31,8 +32,8 @@ namespace designPatterns
             //client = new BuilderClient();
             //client.RunClientCode();
 
-            client = new AbstractFactoryClient();
-            client.RunClientCode();
+            //client = new AbstractFactoryClient();
+            //client.RunClientCode();
 
             //Console.WriteLine("~~~~~ END CREATIONAL DESIGN PATTERNS ~~~~~");
 
@@ -46,6 +47,9 @@ namespace designPatterns
 
             //client = new CompositeClient();
             //client.RunClientCode();
+
+            client = new DecoratorClient();
+            client.RunClientCode();
 
             //Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
 
