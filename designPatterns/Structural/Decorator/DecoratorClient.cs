@@ -8,6 +8,8 @@ namespace designPatterns.Structural.Decorator
     {
         public void RunClientCode()
         {
+            Console.WriteLine("***** START DECORATOR *****");
+
             ITicket ticket = new SimpleTicket();
 
             Console.WriteLine("--- SIMPLE TICKET ---");
@@ -31,6 +33,8 @@ namespace designPatterns.Structural.Decorator
             Console.WriteLine("--- GADGET + COLA + HOT-DOG + TICKET ---");
             Console.WriteLine(ticket.Name);
             Console.WriteLine(ticket.CalculatePrice());
+
+            Console.WriteLine("***** END DECORATOR *****");
         }
     }
 }
