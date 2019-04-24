@@ -13,6 +13,7 @@ using designPatterns.Behavioral.Strategy;
 using designPatterns.Behavioral.TemplateMethod;
 using designPatterns.Creational.AbstractFactory;
 using designPatterns.Structural.Decorator;
+using designPatterns.Structural.Proxy;
 
 namespace designPatterns
 {
@@ -48,7 +49,10 @@ namespace designPatterns
             //client = new CompositeClient();
             //client.RunClientCode();
 
-            client = new DecoratorClient();
+            //client = new DecoratorClient();
+            //client.RunClientCode();
+
+            client = new ProxyClient();
             client.RunClientCode();
 
             //Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
