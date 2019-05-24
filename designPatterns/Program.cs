@@ -15,6 +15,7 @@ using designPatterns.Creational.AbstractFactory;
 using designPatterns.Structural.Decorator;
 using designPatterns.Structural.Proxy;
 using designPatterns.Creational.FactoryMethod;
+using designPatterns.Structural.Flyweight;
 
 namespace designPatterns
 {
@@ -37,8 +38,8 @@ namespace designPatterns
             //client = new AbstractFactoryClient();
             //client.RunClientCode();
 
-            client = new FactoryMethodClient();
-            client.RunClientCode();
+            //client = new FactoryMethodClient();
+            //client.RunClientCode();
 
             //Console.WriteLine("~~~~~ END CREATIONAL DESIGN PATTERNS ~~~~~");
 
@@ -58,6 +59,9 @@ namespace designPatterns
 
             //client = new ProxyClient();
             //client.RunClientCode();
+
+            client = new FlyweightClient();
+            client.RunClientCode();
 
             //Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
 
