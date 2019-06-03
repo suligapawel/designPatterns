@@ -13,10 +13,11 @@ namespace designPatterns.Behavioral.ChainOfResponsibility
             root
                 .SetNext(new PassHandler())
                 .SetNext(new PassHandler())
-                .SetNext(new PassHandler())
                 .SetNext(new CrossHandler())
                 .SetNext(new ShootHandler())
                 .SetNext(new GoalHandler());
+
+            root.Handle();
 
             Console.WriteLine("***** END CHAIN OF RESPONSIBILITY *****");
         }

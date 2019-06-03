@@ -1,4 +1,5 @@
-﻿using designPatterns.Behavioral.Command;
+﻿using designPatterns.Behavioral.ChainOfResponsibility;
+using designPatterns.Behavioral.Command;
 using designPatterns.Behavioral.Memento;
 using designPatterns.Behavioral.Observer;
 using designPatterns.Behavioral.State;
@@ -50,7 +51,7 @@ namespace designPatterns.Creational.SimpleFactory
                 case DesignPattern.Proxy:
                     return new ProxyClient();
                 case DesignPattern.ChainOfResponsibility:
-                    return null;
+                    return new ChainOfResponsibilityClient();
                 case DesignPattern.Command:
                     return new CommandClient();
                 case DesignPattern.Iterator:
