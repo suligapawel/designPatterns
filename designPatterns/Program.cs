@@ -1,21 +1,5 @@
 ﻿using System;
-using designPatterns.Behavioral.Command;
-using designPatterns.Behavioral.Observer;
-using designPatterns.Behavioral.Memento;
-using designPatterns.Behavioral.State;
-using designPatterns.Creational.Prototype;
-using designPatterns.Creational.Singleton;
-using designPatterns.Creational.Builder;
-using designPatterns.Structural.Adapter;
-using designPatterns.Structural.Composite;
-using designPatterns.Structural.Facade;
-using designPatterns.Behavioral.Strategy;
-using designPatterns.Behavioral.TemplateMethod;
-using designPatterns.Creational.AbstractFactory;
-using designPatterns.Structural.Decorator;
-using designPatterns.Structural.Proxy;
-using designPatterns.Creational.FactoryMethod;
-using designPatterns.Structural.Flyweight;
+using designPatterns.Creational.SimpleFactory;
 
 namespace designPatterns
 {
@@ -23,69 +7,17 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            IClient client;
-            //Console.WriteLine("~~~~~ START CREATIONAL DESIGN PATTERNS ~~~~~");
+            IClient client = SimpleFactory.GetPatternClient(DesignPattern.Flyweight);
 
-            //client = new SingletonClient();
-            //client.RunClientCode();
+            if (client != null)
+            {
+                client.RunClientCode();
+            }
+            else
+            {
+                Console.WriteLine("DesignPattern is not implemented");
+            }
 
-            //client = new PrototypeClient();
-            //client.RunClientCode();
-
-            //client = new BuilderClient();
-            //client.RunClientCode();
-
-            //client = new AbstractFactoryClient();
-            //client.RunClientCode();
-
-            //client = new FactoryMethodClient();
-            //client.RunClientCode();
-
-            //Console.WriteLine("~~~~~ END CREATIONAL DESIGN PATTERNS ~~~~~");
-
-            //Console.WriteLine("~~~~~ START STRUCTURAL DESIGN PATTERNS ~~~~~");
-
-            //client = new AdapterClient();
-            //client.RunClientCode();
-
-            //client = new FacadeClient();
-            //client.RunClientCode();
-
-            //client = new CompositeClient();
-            //client.RunClientCode();
-
-            //client = new DecoratorClient();
-            //client.RunClientCode();
-
-            //client = new ProxyClient();
-            //client.RunClientCode();
-
-            client = new FlyweightClient();
-            client.RunClientCode();
-
-            //Console.WriteLine("~~~~~ END STRUCTURAL DESIGN PATTERNS ~~~~~");
-
-            //Console.WriteLine("~~~~~ START BEHAVIORAL DESIGN PATTERNS ~~~~~");
-
-            //client = new CommandClient();
-            //client.RunClientCode();
-
-            //client = new ObserverClient();
-            //client.RunClientCode();
-
-            //client = new MementoClient();
-            //client.RunClientCode();
-
-            //client = new StateClient();
-            //client.RunClientCode();
-
-            //client = new StrategyClient();
-            //client.RunClientCode();
-
-            //client = new TemplateMethodClient();
-            //client.RunClientCode();
-
-            //Console.WriteLine("~~~~~ END BEHAVIORAL DESIGN PATTERNS ~~~~~");
             Console.ReadKey();
         }
     }
