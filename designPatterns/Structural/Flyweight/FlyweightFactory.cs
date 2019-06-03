@@ -6,6 +6,7 @@ namespace designPatterns.Structural.Flyweight
     public class FlyweightFactory
     {
         private readonly Dictionary<int, IFlyweightFan> _dbFans = FakeDb.Fans;
+
         private readonly Dictionary<int, IFlyweightFan> _fansOnStadiumCache;
 
         public FlyweightFactory()
