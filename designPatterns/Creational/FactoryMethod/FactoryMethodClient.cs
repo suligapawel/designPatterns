@@ -10,7 +10,7 @@ namespace designPatterns.Creational.FactoryMethod
         {
             Console.WriteLine("***** START FACTORY METHOD *****");
 
-            BaseCreator creator = null;
+            BaseCreator creator;
 
             creator = new ChampionsLeagueCreator();
             IBall ball = creator.CreateBall();

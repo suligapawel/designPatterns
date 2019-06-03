@@ -5,9 +5,9 @@ namespace designPatterns.Structural.Flyweight
     public class Fan : IFlyweightFan
     {
         public int Id { get; }
-        public string _firstName;
-        public string _lastName;
-        public string _team;
+        private string _firstName;
+        private string _lastName;
+        private string _team;
 
         public Fan(int id, string firstName, string lastName, string team)
         {
