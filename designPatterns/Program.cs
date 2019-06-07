@@ -7,7 +7,7 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            IClient client = SimpleFactory.GetPatternClient(DesignPattern.ChainOfResponsibility);
+            IClient client = SimpleFactory.GetPatternClient(DesignPattern.Visitor);
 
             if (client != null)
             {

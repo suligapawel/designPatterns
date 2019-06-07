@@ -5,6 +5,7 @@ using designPatterns.Behavioral.Observer;
 using designPatterns.Behavioral.State;
 using designPatterns.Behavioral.Strategy;
 using designPatterns.Behavioral.TemplateMethod;
+using designPatterns.Behavioral.Visitor;
 using designPatterns.Creational.AbstractFactory;
 using designPatterns.Creational.Builder;
 using designPatterns.Creational.FactoryMethod;
@@ -69,7 +70,7 @@ namespace designPatterns.Creational.SimpleFactory
                 case DesignPattern.TemplateMethod:
                     return new TemplateMethodClient();
                 case DesignPattern.Visitor:
-                    return null;
+                    return new VisitorClient();
                 default:
                     return null;
             }
