@@ -7,7 +7,7 @@ namespace designPatterns
     {
         static void Main(string[] args)
         {
-            IClient client = SimpleFactory.GetPatternClient(DesignPattern.Visitor);
+            IClient client = SimpleFactory.GetPatternClient(DesignPattern.Mediator);
 
             if (client != null)
             {
