@@ -28,7 +28,7 @@ namespace designPatterns.Behavioral.Visitor
             salary = footballer.Accept(visitor);
             Console.WriteLine(salary);
 
-            Console.WriteLine("***** START VISITOR *****");
+            Console.WriteLine("***** END VISITOR *****");
         }
 
         private void BadExample(BaseFootballer footballer)
