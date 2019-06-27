@@ -1,5 +1,6 @@
 ﻿using designPatterns.Behavioral.ChainOfResponsibility;
 using designPatterns.Behavioral.Command;
+using designPatterns.Behavioral.Iterator;
 using designPatterns.Behavioral.Mediator;
 using designPatterns.Behavioral.Memento;
 using designPatterns.Behavioral.Observer;
@@ -57,7 +58,7 @@ namespace designPatterns.Creational.SimpleFactory
                 case DesignPattern.Command:
                     return new CommandClient();
                 case DesignPattern.Iterator:
-                    return null;
+                    return new IteratorClient();
                 case DesignPattern.Mediator:
                     return new MediatorClient();
                 case DesignPattern.Memento:
