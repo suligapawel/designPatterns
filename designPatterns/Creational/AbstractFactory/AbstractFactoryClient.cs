@@ -7,6 +7,8 @@ namespace designPatterns.Creational.AbstractFactory
     {
         public void RunClientCode()
         {
+            Console.WriteLine("***** START ABSTRACT FACTORY *****");
+
             var matchOutfit = new Outfit(new MatchOutfit());
             var replica = new Outfit(new ReplicaOutfit());
 
@@ -18,6 +20,8 @@ namespace designPatterns.Creational.AbstractFactory
             Console.WriteLine($"Replika stroju zawiera:");
             Console.WriteLine(replica.GetOutfitInfo());
             Console.WriteLine($"KOSZT: {replica.CalculateCoast()}");
+
+            Console.WriteLine("***** END ABSTRACT FACTORY *****");
         }
     }
 }

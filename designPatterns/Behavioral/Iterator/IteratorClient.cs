@@ -8,6 +8,8 @@ namespace designPatterns.Behavioral.Iterator
     {
         public void RunClientCode()
         {
+            Console.WriteLine("***** START ITERATOR *****");
+
             var footballers = new List<string> {
                 "Gerard",
                 "Zidane",
@@ -34,6 +36,8 @@ namespace designPatterns.Behavioral.Iterator
             {
                 Console.WriteLine(footballer);
             }
+
+            Console.WriteLine("***** END ITERATOR *****");
         }
     }
 }

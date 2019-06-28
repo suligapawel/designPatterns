@@ -30,9 +30,12 @@ namespace designPatterns.Behavioral.TemplateMethod
 
         public void RunClientCode()
         {
+            Console.WriteLine("***** START TEMPLATE METHOD *****");
+
             PlayPenaltyContest();
             Console.WriteLine($"WYNIK KOŃCOWY: {_firstTeamScored} : {_secondTeamScored}");
 
+            Console.WriteLine("***** END TEMPLATE METHOD *****");
         }
 
         private void PlayPenaltyContest()

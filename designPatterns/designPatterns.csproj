@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Structural\Bridge\Abstracts\" />
+    <Folder Include="Structural\Bridge\Implementations\" />
+  </ItemGroup>
+
 </Project>

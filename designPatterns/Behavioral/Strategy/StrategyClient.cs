@@ -19,6 +19,8 @@ namespace designPatterns.Behavioral.Strategy
         }
         public void RunClientCode()
         {
+            Console.WriteLine("***** START STRATEGY *****");
+
             ContextStrategy context = new ContextStrategy();
 
             context.SetStrategy(_strategies[1]);
@@ -34,6 +36,8 @@ namespace designPatterns.Behavioral.Strategy
             context.SetStrategy(_strategies[0]);
             context.PlayWithSetStrategy();
             Console.WriteLine("End Match. Result is 2:1");
+
+            Console.WriteLine("***** END STRATEGY *****");
         }
     }
 }

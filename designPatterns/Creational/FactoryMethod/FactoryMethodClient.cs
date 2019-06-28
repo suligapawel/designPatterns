@@ -24,7 +24,7 @@ namespace designPatterns.Creational.FactoryMethod
             ball = creator.CreateBall();
             ball.GetBallInfo();
 
-            Console.WriteLine("***** END FACADE *****");
+            Console.WriteLine("***** END FACTORY METHOD *****");
         }
     }
 }

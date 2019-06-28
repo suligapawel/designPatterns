@@ -1,4 +1,5 @@
 ﻿using designPatterns.Behavioral.State.Handlers;
+using System;
 
 namespace designPatterns.Behavioral.State
 {
@@ -6,6 +7,8 @@ namespace designPatterns.Behavioral.State
     {
         public async void RunClientCode()
         {
+            Console.WriteLine("***** START STATE *****");
+
             var match = new MatchContext(new FirstHalfState());
             await match.RunNextState();
 
@@ -18,6 +21,8 @@ namespace designPatterns.Behavioral.State
                 .RunNextState();
 
             match.ShowResult();
+
+            Console.WriteLine("***** END STATE *****");
         }
     }
 }
